@@ -99,7 +99,7 @@ export function HeroSection() {
               <div className="relative w-72 h-96 sm:w-80 sm:h-105 lg:w-96 lg:h-125 animate-float">
                 <div className="absolute inset-0 bg-card border border-border rounded-3xl overflow-hidden">
                   <Image
-                    src="/technician-repairing-smart-tv-in-professional-work.jpg"
+                    src="/tecnico_reparando.webp"
                     alt="Técnico reparando Smart TV"
                     fill
                     className="object-cover opacity-80"

@@ -24,14 +24,14 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
+              <div className="absolute inset-0 bg-primary rounded-lg blur-xl opacity-20 group-hover:opacity-40 transition-all duration-300 scale-110 -z-10" />
               <Image 
                 src="/logo.png" 
                 alt="Eletrônica Joana Darc" 
-                width={48}
-                height={48}
-                className="w-20 h-15 object-contain rounded-lg"
+                width={64}
+                height={64}
+                className="w-16 h-16 object-contain rounded-lg relative z-10"
               />
-              <div className="absolute inset-0 bg-primary rounded-lg blur-lg opacity-30 group-hover:opacity-50 transition-opacity" />
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-xl font-bold text-foreground tracking-tight leading-tight">Eletrônica</span>
