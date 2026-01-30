@@ -51,7 +51,7 @@ export function ExpertiseSection() {
           >
             <div className="relative aspect-4/3 rounded-2xl overflow-hidden">
               <Image
-                src="/loja_exterior.webp"
+                src="/Loja_exterior.png"
                 alt="Nossa oficina equipada"
                 fill
                 className="object-cover"
@@ -83,7 +83,7 @@ export function ExpertiseSection() {
                 Expertise que faz a diferença
               </h2>
               <p className="mt-4 text-muted-foreground leading-relaxed">
-                A Eletrônica Joana Darc é referência em manutenção de TVs e micro-ondas na região. Além dos reparos,
+                A Eletrônica Joana Dark é referência em manutenção de TVs e micro-ondas na região. Além dos reparos,
                 também trabalhamos com venda de aparelhos novos e seminovos, oferecendo as melhores opções para nossos
                 clientes.
               </p>

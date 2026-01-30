@@ -27,7 +27,7 @@ export function Header() {
               <div className="absolute inset-0 bg-primary rounded-lg blur-xl opacity-20 group-hover:opacity-40 transition-all duration-300 scale-110 -z-10" />
               <Image 
                 src="/logo.png" 
-                alt="Eletrônica Joana Darc" 
+                alt="Eletrônica Joana Dark" 
                 width={64}
                 height={64}
                 className="w-16 h-16 object-contain rounded-lg relative z-10"
@@ -35,7 +35,7 @@ export function Header() {
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-xl font-bold text-foreground tracking-tight leading-tight">Eletrônica</span>
-              <span className="text-xs text-primary tracking-widest uppercase -mt-0.5">Joana Darc</span>
+              <span className="text-xs text-primary tracking-widest uppercase -mt-0.5">Joana Dark</span>
             </div>
           </Link>
 

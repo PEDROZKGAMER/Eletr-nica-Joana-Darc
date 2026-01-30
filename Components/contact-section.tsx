@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react"
 import { Button } from "@/Components/ui/button"
 import { Input } from "@/Components/ui/input"
 import { Textarea } from "@/Components/ui/textarea"
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, ChevronDown } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, ChevronDown, MessageCircle } from "lucide-react"
 import { useScrollReveal } from "@/hooks/use-scroll-reveal"
 
 export function ContactSection() {
@@ -25,10 +25,36 @@ export function ContactSection() {
   const { ref: infoRef, isVisible: infoVisible } = useScrollReveal({ threshold: 0.1 })
   const { ref: formRef, isVisible: formVisible } = useScrollReveal({ threshold: 0.1 })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+
+    // 1. Captura os dados usando FormData (mais limpo)
+    const formData = new FormData(e.currentTarget)
+    const name = formData.get("name")
+    const phone = formData.get("phone")
+    const email = formData.get("email")
+    const device = formData.get("device")
+    const problem = formData.get("problem")
+    const serviceLabel = serviceOptions.find(o => o.value === selectedValue)?.label || "Não informado"
+
+    // 2. Formatação da mensagem para o WhatsApp
+    const message = `*Nova Solicitação de Orçamento*%0A` +
+      `----------------------------------%0A` +
+      `*Nome:* ${name}%0A` +
+      `*Telefone:* ${phone}%0A` +
+      `*E-mail:* ${email}%0A` +
+      `*Serviço:* ${serviceLabel}%0A` +
+      `*Aparelho:* ${device}%0A` +
+      `*Necessidade:* ${problem}%0A` +
+      `----------------------------------`
+
+    const whatsappNumber = "558388692960"
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
+
+    // 3. Abre o WhatsApp e mostra sucesso no site
+    window.open(whatsappUrl, "_blank")
     setIsSubmitted(true)
-    setTimeout(() => setIsSubmitted(false), 3000)
+    setTimeout(() => setIsSubmitted(false), 5000)
   }
 
   useEffect(() => {
@@ -72,20 +98,20 @@ export function ContactSection() {
     {
       icon: Phone,
       title: "Telefone",
-      content: "(83) 8869-2960",
+      content: "(83) 98869-2960",
       subcontent: "(83) 3247-2703",
     },
     {
       icon: Mail,
       title: "E-mail",
-      content: "contato@joaoDarc.com.br",
-      subcontent: "eletronicajoanaDarc@hotmail.com",
+      content: "darkgaldino2016@gmail.com",
+      subcontent: "eletronicajoanaDark@hotmail.com",
     },
     {
       icon: Clock,
       title: "Horário",
       content: "Seg - Sex: 08:30 às 17h",
-      subcontent: "Sábado: 8h às 12h",
+      subcontent: "Sábado: 9h às 12h",
     },
   ]
 
@@ -144,7 +170,7 @@ export function ContactSection() {
               }`}
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1380812991256!2d-34.83331078945882!3d-7.109992292863869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd3d18b2ee67%3A0x1f361a32372fee05!2sEletr%C3%B4nica%20Joana%20Darc!5e0!3m2!1spt-BR!2sbr!4v1768236633051!5m2!1spt-BR!2sbr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.1380812991256!2d-34.83331078945882!3d-7.109992292863869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd3d18b2ee67%3A0x1f361a32372fee05!2sEletr%C3%B4nica%20Joana%20Dark!5e0!3m2!1spt-BR!2sbr!4v1768236633051!5m2!1spt-BR!2sbr"
                 width="100%"
                 height="100%"
                 style={{border:0}}
@@ -182,13 +208,13 @@ export function ContactSection() {
                       <label htmlFor="name" className="text-sm font-medium text-foreground">
                         Nome completo
                       </label>
-                      <Input id="name" placeholder="Seu nome" className="bg-card border-border" required />
+                      <Input id="name" name="name" placeholder="Seu nome" className="bg-card border-border" required />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="phone" className="text-sm font-medium text-foreground">
                         Telefone
                       </label>
-                      <Input id="phone" placeholder="(11) 99999-9999" className="bg-card border-border" required />
+                      <Input id="phone" name="phone" placeholder="(11) 99999-9999" className="bg-card border-border" required />
                     </div>
                   </div>
 
@@ -198,6 +224,7 @@ export function ContactSection() {
                     </label>
                     <Input
                       id="email"
+                      name="email"
                       type="email"
                       placeholder="seu@email.com"
                       className="bg-card border-border"
@@ -245,6 +272,7 @@ export function ContactSection() {
                     </label>
                     <Input
                       id="device"
+                      name="device"
                       placeholder="Ex: TV Samsung 55 polegadas ou Micro-ondas 30L"
                       className="bg-card border-border"
                       required
@@ -257,15 +285,19 @@ export function ContactSection() {
                     </label>
                     <Textarea
                       id="problem"
+                      name="problem"
                       placeholder="Conte-nos mais sobre o reparo necessário ou o aparelho que procura..."
                       className="bg-card border-border min-h-30"
                       required
                     />
                   </div>
 
-                  <Button type="submit" className="w-full bg-primary text-primary-foreground hover:bg-primary/90 gap-2">
-                    <Send className="w-4 h-4" />
-                    Enviar Solicitação
+                  <Button
+                    type="submit"
+                    className="w-full bg-[#25D366] text-white hover:bg-[#128C7E] gap-2 font-bold py-6 text-lg transition-colors"
+                  >
+                    <MessageCircle className="w-6 h-6" />
+                    Enviar Orçamento via WhatsApp
                   </Button>
 
                   <p className="text-xs text-center text-muted-foreground">

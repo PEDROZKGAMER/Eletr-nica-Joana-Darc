@@ -34,7 +34,7 @@ export function TestimonialsSection() {
       role: "Cliente desde 2018",
       image: "/Junior_cliente.png",
       content:
-        "Me surpreendeu muito, Levei uma tv, enfim não compensava comparada o preço da tela nova por uma tv nova. Mas a eletrônica Joana Darc foi super atenciosa, nos explicou tudo direitinho, nos mostrou valores de peças, enfim foram super honestos. Não quero que uma nova tv estrague, mas se acontecer eu já sei que é lá que levarei, e indico. Se quer levar a um lugar de confiança: leve neles!. E isso é tão bom quando acontece, a gente encontra tanta gente querendo tirar vantagem, que a gente tem que dar parabéns pra elogiar quando faz um bom trabalho Parabéns !!!",
+        "Me surpreendeu muito, Levei uma tv, enfim não compensava comparada o preço da tela nova por uma tv nova. Mas a eletrônica Joana Dark foi super atenciosa, nos explicou tudo direitinho, nos mostrou valores de peças, enfim foram super honestos. Não quero que uma nova tv estrague, mas se acontecer eu já sei que é lá que levarei, e indico. Se quer levar a um lugar de confiança: leve neles!. E isso é tão bom quando acontece, a gente encontra tanta gente querendo tirar vantagem, que a gente tem que dar parabéns pra elogiar quando faz um bom trabalho Parabéns !!!",
       rating: 5,
       device: 'TV Smart',
     },

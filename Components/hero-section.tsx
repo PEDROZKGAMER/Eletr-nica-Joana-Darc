@@ -62,13 +62,6 @@ export function HeroSection() {
                 Solicitar Orçamento
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-border text-foreground hover:bg-card gap-2 text-base bg-transparent"
-              >
-                Ver Produtos à Venda
-              </Button>
             </div>
 
             {/* Trust Badges */}
@@ -99,7 +92,7 @@ export function HeroSection() {
               <div className="relative w-72 h-96 sm:w-80 sm:h-105 lg:w-96 lg:h-125 animate-float">
                 <div className="absolute inset-0 bg-card border border-border rounded-3xl overflow-hidden">
                   <Image
-                    src="/tecnico_reparando.webp"
+                    src="/office_loja.png"
                     alt="Técnico reparando Smart TV"
                     fill
                     className="object-cover opacity-80"
@@ -109,7 +102,7 @@ export function HeroSection() {
                 </div>
 
                 {/* Floating Cards */}
-                <div className="absolute -left-8 top-1/4 bg-card border border-border rounded-xl p-4 shadow-xl">
+                <div className="absolute -right-8 top-1/4 bg-card border border-border rounded-xl p-4 shadow-xl">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
                       <Tv className="w-5 h-5 text-primary" />
@@ -121,7 +114,7 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                <div className="absolute -right-4 bottom-1/3 bg-card border border-border rounded-xl p-4 shadow-xl">
+                <div className="absolute -left-8 top4 bottom-1/3 bg-card border border-border rounded-xl p-4 shadow-xl">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
                       <Zap className="w-5 h-5 text-accent" />

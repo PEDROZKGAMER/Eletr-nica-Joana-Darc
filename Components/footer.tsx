@@ -25,7 +25,7 @@ export function Footer() {
   ]
 
   const socialLinks = [
-    { icon: Instagram, href: "https://www.instagram.com/joanaDarcxaviergaldino?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/joanaDarkxaviergaldino?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
     { icon: MessageCircle, href: "https://wa.me/558388692960", label: "WhatsApp" },
   ]
 
@@ -45,7 +45,7 @@ export function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg font-bold text-foreground tracking-tight">Eletrônica</span>
-                <span className="text-xs text-primary tracking-widest uppercase -mt-1">Joana Darc</span>
+                <span className="text-xs text-primary tracking-widest uppercase -mt-1">Joana Dark</span>
               </div>
             </Link>
             <p className="text-sm text-muted-foreground mb-6">
@@ -115,9 +115,9 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Contato</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>Whatsapp: (83) 988389698</li>
+              <li>Whatsapp: (83) 98869-2960</li>
               <li>Fixo: (83) 3247-2703</li>
-              <li>contato@joaoDarc.com.br</li>
+              <li>contato@joaoDark.com.br</li>
               <li>
                 Av. Monteiro da Franca, 516 A - Manaíra, Joana Pessoa - PB, 58038-151
               </li>
@@ -132,7 +132,7 @@ export function Footer() {
           }`}
         >
           <p className="text-sm text-muted-foreground">
-            © {currentYear} Eletrônica Joana Darc. Todos os direitos reservados.
+            © {currentYear} Eletrônica Joana Dark. Todos os direitos reservados.
           </p>
           <div className="flex gap-6">
             <Link href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
