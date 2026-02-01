@@ -13,7 +13,6 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       name: "Alcione",
-      role: "Cliente desde 2019",
       image: "/alcione_cliente.png",
       content:
         "Levei minha tv que estava com problema na tela, por sinal é da marca AOC (não comprem!!!) e com pouco mais de um ano de uso, e o pessoal da assistência me informou que se tivesse que trocar a tela seria difícil de encontrar. Infelizmente era esse o problema!!! :( Mas eles foram maravilhosos, conseguiram dar um jeitinho e nem cobraram o serviço. Super honestos e comprometidos!!!",
@@ -22,7 +21,6 @@ export function TestimonialsSection() {
     },
     {
       name: "Eledi",
-      role: "Cliente desde 2021",
       image: "/Eledi_cliente.png",
       content:
         "Levei a porta do meu microondas para colocar a mola que quebrou… deu um trabalhão para tirar o encaixe da porta e por a mola. No final não queriam cobrar… meu marido não aceitou, é claro! Parabéns pelo profissionalismo. Deus os abençoe.",
@@ -31,7 +29,6 @@ export function TestimonialsSection() {
     },
     {
       name: "Júnior",
-      role: "Cliente desde 2018",
       image: "/Junior_cliente.png",
       content:
         "Me surpreendeu muito, Levei uma tv, enfim não compensava comparada o preço da tela nova por uma tv nova. Mas a eletrônica Joana Dark foi super atenciosa, nos explicou tudo direitinho, nos mostrou valores de peças, enfim foram super honestos. Não quero que uma nova tv estrague, mas se acontecer eu já sei que é lá que levarei, e indico. Se quer levar a um lugar de confiança: leve neles!. E isso é tão bom quando acontece, a gente encontra tanta gente querendo tirar vantagem, que a gente tem que dar parabéns pra elogiar quando faz um bom trabalho Parabéns !!!",
@@ -40,7 +37,6 @@ export function TestimonialsSection() {
     },
     {
       name: "Maria",
-      role: "Cliente desde 2022",
       image: "/Maria_cliente.png",
       content:
         "Levei minha TV LG 47 para conserto. Foram atenciosos e rápidos no diagnostico. Logo providenciaram a peça para substituição. Senti honestidade no atendimento e o preço, acredito que justo haja vista ser um aparelho de boa qualidade e que nunca havia tido problema antes e estar bem conservado e cuidado. Recomendo, sem dúvida.",
@@ -119,7 +115,6 @@ export function TestimonialsSection() {
                 />
                 <div>
                   <p className="font-semibold text-foreground">{testimonials[currentIndex].name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonials[currentIndex].role}</p>
                 </div>
               </div>
             </div>

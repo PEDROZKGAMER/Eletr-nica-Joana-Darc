@@ -117,7 +117,7 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>Whatsapp: (83) 98869-2960</li>
               <li>Fixo: (83) 3247-2703</li>
-              <li>contato@joaoDark.com.br</li>
+              <li>darkgaldino2016@gmail.com</li>
               <li>
                 Av. Monteiro da Franca, 516 A - Manaíra, Joana Pessoa - PB, 58038-151
               </li>

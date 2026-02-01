@@ -26,7 +26,7 @@ export function Header() {
             <div className="relative">
               <div className="absolute inset-0 bg-primary rounded-lg blur-xl opacity-20 group-hover:opacity-40 transition-all duration-300 scale-110 -z-10" />
               <Image 
-                src="/logo.png" 
+                src="/logo_loja.png" 
                 alt="Eletrônica Joana Dark" 
                 width={64}
                 height={64}
